@@ -96,6 +96,39 @@ Run the following command to create an EKS cluster named `mycluster` in `us-east
 ```bash
 eksctl create cluster --name mycluster --region us-east-1
 ```
+```
+eksctl create cluster \
+--name mycluster \
+--region us-east-1 \
+--nodegroup-name mynodes \
+--node-type t3.small \
+--nodes 2 \
+--nodes-min 2 \
+--nodes-max 2 \
+--managed
+```
+# cluster-config.yaml
+```
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: mycluster
+  region: us-east-1
+
+nodeGroups:
+  - name: mynodes
+    instanceType: t3.small
+    desiredCapacity: 2
+    minSize: 2
+    maxSize: 2
+    amiFamily: AmazonLinux2
+    ssh:
+      allow: true
+```
+```
+eksctl create cluster -f cluster-config.yaml
+```
 
 **Note:** This will take several minutes. It creates:
 
