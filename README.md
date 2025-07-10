@@ -101,7 +101,7 @@ eksctl create cluster \
 --name mycluster \
 --region us-east-1 \
 --nodegroup-name mynodes \
---node-type t3.small \
+--node-type t3.micro \
 --nodes 2 \
 --nodes-min 2 \
 --nodes-max 2 \
