@@ -3,6 +3,12 @@
 This guide walks through the process of creating an IAM user with full administrative access, setting up AWS CLI and `eksctl` on Windows, and creating/deleting an EKS cluster.
 
 ---
+## 📸 Screenshot
+
+![EKS](https://github.com/atulkamble/eks-create-cluster/blob/main/eks.png)
+
+---
+
 
 ## 📌 Prerequisites
 
