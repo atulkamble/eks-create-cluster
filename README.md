@@ -142,6 +142,22 @@ eksctl create cluster -f cluster-config.yaml
 * Managed node group
 * Networking resources
 
+## create eks manually 
+```
+EKS - manually 
+
+1. search eks 
+2. create cluster 
+3. name cluster - mycluster 
+4. create AmazonEKSAutoClusterRole Role 
+5. create AmazonEKSAutoNodeRole Role 
+6. Create node group - mynodegroup
+7. min- 2, max- 2, desired - 2 | managed/spot | type- t3.micro
+8. open cloud shell 
+
+aws eks update-kubeconfig --region us-east-1 --name mycluster
+kubectl get nodes
+```
 ---
 
 ## ❌ Delete EKS Cluster
