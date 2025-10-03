@@ -1,3 +1,4 @@
+```
 choco install eksctl
 
 eksctl version
@@ -29,3 +30,4 @@ kubectl get deployments
 kubecl get service hello-web-svc
 
 eksctl delete cluster --name mycluster --region us-east-1
+```
