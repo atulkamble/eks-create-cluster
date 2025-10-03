@@ -102,12 +102,17 @@ Run the following command to create an EKS cluster named `mycluster` in `us-east
 ```bash
 eksctl create cluster --name mycluster --region us-east-1
 ```
+// on powershell
+```
+eksctl create cluster --name mycluster --region us-east-1 --nodegroup-name mynodes --node-type t3.medium --nodes 2 --nodes-min 2 --nodes-max 2 --managed
+```
+// on mac
 ```
 eksctl create cluster \
 --name mycluster \
 --region us-east-1 \
 --nodegroup-name mynodes \
---node-type t3.micro \
+--node-type t3.medium \
 --nodes 2 \
 --nodes-min 2 \
 --nodes-max 2 \
